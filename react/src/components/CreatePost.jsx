@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Button from "./UI/Button";
 import Input from "./UI/Input";
 
-const CreatePost = ({ create }) => {
+const CreatePost = ({ create, created }) => {
 	const [post, setPost] = useState({ title: "", description: "" });
 
 	const addNewPost = () => {
@@ -14,6 +14,7 @@ const CreatePost = ({ create }) => {
 
 		create(newPost);
 
+		created(false);
 		setPost({ title: "", description: "" });
 	};
 

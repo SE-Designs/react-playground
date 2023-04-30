@@ -2,7 +2,6 @@ import Button from "./UI/Button";
 import React from "react";
 
 const PostItem = (props) => {
-	console.log(props);
 	return (
 		<div
 			className="post"
